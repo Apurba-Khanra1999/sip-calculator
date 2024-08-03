@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +35,58 @@
             <div>Final Amount: ₹&nbsp;<span id="finalAmount">0.00</span></div>
         </div>
         
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SIP Calculator</h1>
+        <div class="form-group">
+            <label for="lumpsum">Lumpsum Amount:</label>
+            <input type="number" id="lumpsum" value="0">
+        </div>
+        <div class="form-group">
+            <label for="monthly">Monthly Investment Amount:</label>
+            <input type="number" id="monthly" value="1000">
+        </div>
+        <div class="form-group">
+            <label for="years">Years:</label>
+            <input type="range" id="years" min="1" max="30" value="5" oninput="updateYearsValue(this.value)">
+            <span id="yearsValue">5</span>
+        </div>
+        <div class="form-group">
+            <label for="rate">Rate of Interest (%):</label>
+            <input type="range" id="rate" min="1" max="30" value="12" oninput="updateRateValue(this.value)">
+            <span id="rateValue">12</span>
+        </div>
+        <button class="button" onclick="calculateSIP()">Calculate</button>
+        <br>
+        <div id="result">
+            <div>Total Investment: ₹&nbsp;<span id="totalInvestment">0.00</span></div>
+            <div>Total Returns: ₹&nbsp;<span id="totalReturn">0.00</span></div>
+            <div>Final Amount: ₹&nbsp;<span id="finalAmount">0.00</span></div>
+        </div>
+        <br>
+        <button class="button" onclick="showYearlyBreakdown()" style="margin-bottom: 20px;">Yearly Breakdown</button>
+        <button class="button" onclick="showMonthlyBreakdown()">Monthly Breakdown</button>
+    </div>
+    
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeDialog()">&times;</span>
+            <div id="dialogText" class="dialog-text"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
