@@ -109,7 +109,7 @@ button:hover::before {
 
  body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8;
+    background-image: linear-gradient(to right, #e6dfff, #c4b5fd, #a58eff, #7d5cff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +122,18 @@ button:hover::before {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section {
+    width: 45%;
+}
+
+.right-section {
+    width: 50%;
+    text-align: center;
 }
 
 h1 {
@@ -133,6 +144,7 @@ h1 {
     letter-spacing: 2px;
     text-decoration: underline;
     text-decoration-color: #5D3FD3;
+    font-size: 40px;
 }
 
 .form-group {
@@ -160,18 +172,18 @@ input[type="number"] {
 
 input[type="number"]:focus {
     outline: 2px solid #5D3FD3;
-  }
+}
 
 input[type="range"] {
-    -webkit-appearance: none; /* Remove default appearance */
+    -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 5px; /* Adjust track height */
-    background: linear-gradient(to right, #e3dcff, #beaeff); /* Create a gradient track */
+    height: 5px;
+    background: linear-gradient(to right, #e3dcff, #beaeff);
     border-radius: 5px;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
+}
+
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
@@ -179,80 +191,86 @@ input[type="range"] {
     border-radius: 50%;
     background: #5D3FD3;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
-    transition: all 0.2s ease-in-out; /* Smooth transitions */
-  }
-  
-  input[type="range"]::-webkit-slider-thumb:hover {
-    background: #5D3FD3; /* Change color on hover */
-  }
-  
-  input[type="range"]::-webkit-slider-thumb:active {
-    background: #5D3FD3; /* Change color on active */
-  }
-  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
 
-.row-btn{
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #5D3FD3;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    background: #5D3FD3;
+}
+
+.row-btn {
     display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .button {
-  display: block;
-  width: 100%;
-  padding: 1em 2em;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #5D3FD3;
-  transition: all 1000ms;
-  font-size: 15px;
-  position: relative;
-  overflow: hidden;
-  outline: 2px solid #5D3FD3;
-  margin-bottom: 10px;
-  background-color: #fff;
+    display: block;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #5D3FD3;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #5D3FD3;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
 }
 
 button:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-  outline: 2px solid #5D3FD3;
-  box-shadow: 4px 5px 17px -4px #5D3FD3;
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #5D3FD3;
+    box-shadow: 4px 5px 17px -4px #5D3FD3;
 }
 
 button::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: #5D3FD3;
-  transform: skewX(45deg);
-  z-index: -1;
-  transition: width 1000ms;
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #5D3FD3;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
 }
 
 button:hover::before {
-  width: 250%;
+    width: 250%;
 }
 
 #result {
-    margin-top: 20px;
-    text-align: center;
+    margin-bottom: 20px;
     font-size: 1.1em;
 }
 
 #result div {
     margin-bottom: 10px;
+    
 }
 
 #result span {
     font-weight: bold;
     color: #333;
+}
+
+#doughnutChart {
+    max-width: 100%;
+    max-height: 400px;
 }
 
 .dialog {
