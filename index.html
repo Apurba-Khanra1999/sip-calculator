@@ -73,20 +73,20 @@
         <div class="left-section">
             <h1>SIP Calculator</h1>
             <div class="form-group">
-                <label for="lumpsum">Lumpsum Amount:</label>
+                <label for="lumpsum">Lumpsum Amount</label>
                 <input type="number" id="lumpsum" value="0">
             </div>
             <div class="form-group">
-                <label for="monthly">Monthly Investment Amount:</label>
+                <label for="monthly">Monthly Investment Amount</label>
                 <input type="number" id="monthly" value="1000">
             </div>
             <div class="form-group">
-                <label for="years">Years:</label>
+                <label for="years">Years</label>
                 <input type="range" id="years" min="1" max="30" value="5" oninput="updateYearsValue(this.value)">
                 <span id="yearsValue">5</span>
             </div>
             <div class="form-group">
-                <label for="rate">Rate of Interest (%):</label>
+                <label for="rate">Rate of Interest (%)</label>
                 <input type="range" id="rate" min="1" max="30" value="12" oninput="updateRateValue(this.value)">
                 <span id="rateValue">12</span>
             </div>
@@ -94,9 +94,9 @@
         </div>
         <div class="right-section">
             <div id="result">
-                <div>Final Amount: ₹&nbsp;<span id="finalAmount" style="font-size: 24px; font-weight: 600; color: #5D3FD3;">0.00</span></div>
-                <div>Total Investment: ₹&nbsp;<span id="totalInvestment">0.00</span></div>
-                <div>Total Returns: ₹&nbsp;<span id="totalReturn">0.00</span></div>
+                <div class="result-item">Total Investment<span id="totalInvestment">0.00</span></div>
+                <div class="result-item">Total Returns<span id="totalReturn">0.00</span></div>
+                <div class="result-item">Final Amount <span id="finalAmount" style="font-size: 24px; font-weight: 600; color: #5D3FD3;">0.00</span></div>
             </div>
             <canvas id="doughnutChart"></canvas>
             <div class="row-btn">

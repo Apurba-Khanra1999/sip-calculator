@@ -128,11 +128,11 @@ button:hover::before {
 }
 
 .left-section {
-    width: 45%;
+    width: 50%;
 }
 
 .right-section {
-    width: 50%;
+    width: 40%;
     text-align: center;
 }
 
@@ -256,6 +256,7 @@ button:hover::before {
 #result {
     margin-bottom: 20px;
     font-size: 1.1em;
+    font-weight: 600;
 }
 
 #result div {
@@ -266,6 +267,12 @@ button:hover::before {
 #result span {
     font-weight: bold;
     color: #333;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 #doughnutChart {
